@@ -1,0 +1,45 @@
+PODS:
+  - BabyBluetooth (0.6.0)
+  - BubbleTransition (1.0.3)
+  - CRToast (0.0.9)
+  - CRToastSwift (0.1.1):
+    - CRToast (~> 0.0.9)
+  - NVActivityIndicatorView (2.4)
+  - Ophiuchus (1.0.3)
+  - pop (1.0.9)
+  - Shimmer (1.0.2)
+  - SnapKit (0.19.1)
+  - SVProgressHUD (2.0.3)
+  - TTGEmojiRate (0.1.6)
+  - VideoSplashKit (1.1.0)
+
+DEPENDENCIES:
+  - BabyBluetooth
+  - BubbleTransition (~> 1.0.0)
+  - CRToastSwift
+  - NVActivityIndicatorView
+  - Ophiuchus (~> 1.0.3)
+  - pop
+  - Shimmer
+  - SnapKit (~> 0.19.1)
+  - SVProgressHUD
+  - TTGEmojiRate
+  - VideoSplashKit
+
+SPEC CHECKSUMS:
+  BabyBluetooth: 998483310b5f44724d97c2fd47e82ed1b7e412de
+  BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
+  CRToastSwift: 81d0634c2f567203a7651fb655ab0f58f8a4ba97
+  NVActivityIndicatorView: 275a3248d752b5eb1163b33aee664d7e3b43c101
+  Ophiuchus: 486de58f85284047835a26e23ac9fe4fe2255391
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TTGEmojiRate: 52bfbd96db1616617f9257d249030e3cbef748dc
+  VideoSplashKit: 0aa63d0bb37c5bd357de3e6a2a13dea5acad4d66
+
+PODFILE CHECKSUM: 76705581e6e65b766ed8373134527e793227e4fe
+
+COCOAPODS: 1.0.0.beta.4
