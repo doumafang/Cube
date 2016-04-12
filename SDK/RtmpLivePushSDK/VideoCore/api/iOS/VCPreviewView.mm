@@ -152,7 +152,7 @@
 }
 - (void) layoutSubviews
 {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor blackColor];
     [self generateGLESBuffers];
 }
 - (void) notification: (NSNotification*) notification {

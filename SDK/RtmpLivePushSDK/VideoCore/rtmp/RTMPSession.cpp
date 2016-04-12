@@ -678,20 +678,17 @@ namespace videocore
         m_jobQueue.enqueue([=]{
             int streamId = 0;
             std::vector<uint8_t> buff;
-            put_byte(buff, 2);//2
-            put_be24(buff, 0);//0
-            put_be24(buff, 10);//10
+            put_byte(buff, 2);
+            put_be24(buff, 0);
+            put_be24(buff, 10);
             put_byte(buff, RTMP_PT_PING);
             put_buff(buff, (uint8_t*)&streamId, sizeof(int32_t));
             
-            put_be16(buff, 3); // SetBufferTime//3
+            put_be16(buff, 3); // SetBufferTime
             put_be32(buff, m_streamId);
             put_be32(buff, milliseconds);
             
             write(&buff[0], buff.size());
-            
-            
-            
             
         });
     }    bool

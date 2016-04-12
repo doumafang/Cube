@@ -20688,6 +20688,7 @@
 				B7BB88101CA3BA7D00D05AEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

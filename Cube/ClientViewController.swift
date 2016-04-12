@@ -14,6 +14,8 @@ import SnapKit
 
 
 class ClientViewController: UIViewController {
+    
+    let player = IJKFFMoviePlayerController(contentURL: kRTMPURL, withOptions: IJKFFOptions.optionsByDefault())
     override func viewDidLoad(){
         
         super.viewDidLoad()
@@ -21,9 +23,8 @@ class ClientViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         let bb = BlueTooth()
         bb.openBB()
-
+        
         IJKFFMoviePlayerController.checkIfFFmpegVersionMatch(true)
-        let player = IJKFFMoviePlayerController(contentURL: kRTMPURL, withOptions: IJKFFOptions.optionsByDefault())
         player.scalingMode = IJKMPMovieScalingMode.AspectFit
         player.shouldAutoplay = true
         player.view.frame = CGRectMake(0, 0, kSCREEN_HEIGHT*10/16, kSCREEN_HEIGHT)
@@ -129,7 +130,9 @@ class ClientViewController: UIViewController {
 
     
     func gestureTap(gestureRecognizer: UIGestureRecognizer){
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion:{
+            self.player.pause()
+        })
     }
     
     override func prefersStatusBarHidden() -> Bool {

@@ -721,7 +721,7 @@ namespace videocore { namespace simpleApi {
 
 
         // The H.264 Encoder introduces about 2 frames of latency, so we will set the minimum audio buffer duration to 2 frames.
-        m_audioMixer->setMinimumBufferDuration(0);
+        m_audioMixer->setMinimumBufferDuration(frameDuration*2);
     }
 #ifdef __APPLE__
 #ifdef TARGET_OS_IPHONE

@@ -109,16 +109,8 @@
         
         _ShowPreview = previewView;
         [previewView addSubview:_livesession.previewView];
-        
-//        _livesession.previewView.frame =  previewView.bounds;
-        
-        float width = previewView.bounds.size.width;
-        float height = previewView.bounds.size.height;
-        float hh = height / width;
-        NSLog(@"%f",height);
-//        _livesession.previewView.frame =  CGRectMake(-(height * hh -height)/2, -(height * hh -height)/2, height * hh, height * hh);
-        
         _livesession.previewView.frame = previewView.bounds;
+        
         NSLog(@"rtmpUrl=%@, destination=%@, livename=%@\r\nwidth=%.2f, height=%.2f, bitRate=%lu, frameRate=%lu",
               rtmpUrl.absoluteString, _Dest, _LiveName,
               videSize.width, videSize.height, (unsigned long)iBitRate, (unsigned long)iFrameRate);
