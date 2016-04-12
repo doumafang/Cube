@@ -26,7 +26,6 @@
 		944AEC811CBCC9B9003E36B1 /* Splash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 944AEC7E1CBCC9B9003E36B1 /* Splash.mp4 */; };
 		944AEC851CBCCE6B003E36B1 /* Gotham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944AEC841CBCCE6B003E36B1 /* Gotham.otf */; };
 		94556B7A1CBA39B800BAEDE9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94556B791CBA39B800BAEDE9 /* CoreText.framework */; };
-		94558CA81CBA4CDC00BAEDE9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94558CA21CBA4CB200BAEDE9 /* IJKMediaFramework.framework */; };
 		9467B54C1CB960AC00D384EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B54B1CB960AC00D384EB /* AppDelegate.swift */; };
 		9467B54E1CB960AC00D384EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B54D1CB960AC00D384EB /* ViewController.swift */; };
 		9467B5511CB960AC00D384EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9467B54F1CB960AC00D384EB /* Main.storyboard */; };
@@ -36,22 +35,23 @@
 		9467B5791CBA1A3C00D384EB /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B5781CBA1A3C00D384EB /* ClientViewController.swift */; };
 		9467B57B1CBA1CDA00D384EB /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B57A1CBA1CDA00D384EB /* PublishViewController.swift */; };
 		946ED6C21CBAAD6800862336 /* libLiveVideoCoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946ED6C11CBAAD6800862336 /* libLiveVideoCoreSDK.a */; };
+		949F0DE41CBD3884003A7CA7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949F0DE11CBD387A003A7CA7 /* IJKMediaFramework.framework */; };
 		94EE07491CBA2BD20082D211 /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07441CBA2BD20082D211 /* TBCityIconFont.m */; };
 		94EE074A1CBA2BD20082D211 /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07461CBA2BD20082D211 /* TBCityIconInfo.m */; };
 		94EE074B1CBA2BD20082D211 /* UIImage+TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07481CBA2BD20082D211 /* UIImage+TBCityIconFont.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		94558CA11CBA4CB200BAEDE9 /* PBXContainerItemProxy */ = {
+		949F0DE01CBD387A003A7CA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */;
+			containerPortal = 949F0DDB1CBD387A003A7CA7 /* IJKMediaPlayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E654EA8A1B6B27E600B0F2D0;
 			remoteInfo = IJKMediaFramework;
 		};
-		94558CA31CBA4CB200BAEDE9 /* PBXContainerItemProxy */ = {
+		949F0DE21CBD387A003A7CA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */;
+			containerPortal = 949F0DDB1CBD387A003A7CA7 /* IJKMediaPlayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E654EA941B6B27E600B0F2D0;
 			remoteInfo = IJKMediaFrameworkTests;
@@ -80,7 +80,6 @@
 		944AEC7E1CBCC9B9003E36B1 /* Splash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Splash.mp4; path = Cube/Splash.mp4; sourceTree = "<group>"; };
 		944AEC841CBCCE6B003E36B1 /* Gotham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gotham.otf; sourceTree = "<group>"; };
 		94556B791CBA39B800BAEDE9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = "../../Downloads/ijkplayer-ios/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj"; sourceTree = "<group>"; };
 		9467B5481CB960AC00D384EB /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9467B54B1CB960AC00D384EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9467B54D1CB960AC00D384EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		9467B5781CBA1A3C00D384EB /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		9467B57A1CBA1CDA00D384EB /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		946ED6C11CBAAD6800862336 /* libLiveVideoCoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLiveVideoCoreSDK.a; path = "../../Library/Developer/Xcode/DerivedData/Cube-euzmcxueupifggfolzmvarnmjzlv/Build/Products/Debug-iphoneos/libLiveVideoCoreSDK.a"; sourceTree = "<group>"; };
+		949F0DDB1CBD387A003A7CA7 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = "../../Downloads/ijkplayer-ios/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj"; sourceTree = "<group>"; };
 		94EE07431CBA2BD20082D211 /* TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconFont.h; sourceTree = "<group>"; };
 		94EE07441CBA2BD20082D211 /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
 		94EE07451CBA2BD20082D211 /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949F0DE41CBD3884003A7CA7 /* IJKMediaFramework.framework in Frameworks */,
 				94474C0F1CBAB4BB00264B81 /* CoreGraphics.framework in Frameworks */,
 				94474C0D1CBAB4B200264B81 /* OpenGLES.framework in Frameworks */,
 				94474C0B1CBAB4AC00264B81 /* AudioToolbox.framework in Frameworks */,
@@ -117,7 +118,6 @@
 				94474C031CBAB47D00264B81 /* libz.tbd in Frameworks */,
 				94474C011CBAB47600264B81 /* libstdc++.tbd in Frameworks */,
 				946ED6C21CBAAD6800862336 /* libLiveVideoCoreSDK.a in Frameworks */,
-				94558CA81CBA4CDC00BAEDE9 /* IJKMediaFramework.framework in Frameworks */,
 				94556B7A1CBA39B800BAEDE9 /* CoreText.framework in Frameworks */,
 				5FF73CD1D808A629E2031F98 /* Pods_Cube.framework in Frameworks */,
 			);
@@ -146,19 +146,10 @@
 			name = Animation;
 			sourceTree = "<group>";
 		};
-		94558C9D1CBA4CB200BAEDE9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				94558CA21CBA4CB200BAEDE9 /* IJKMediaFramework.framework */,
-				94558CA41CBA4CB200BAEDE9 /* IJKMediaFrameworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9467B53F1CB960AC00D384EB = {
 			isa = PBXGroup;
 			children = (
-				94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */,
+				949F0DDB1CBD387A003A7CA7 /* IJKMediaPlayer.xcodeproj */,
 				94EE072F1CBA27990082D211 /* Extensions */,
 				9467B5661CB9645A00D384EB /* Cube-Bridging-Header.h */,
 				9467B56E1CB9F26A00D384EB /* Constans.swift */,
@@ -230,6 +221,15 @@
 				944AEC701CBC8FE2003E36B1 /* BB */,
 			);
 			name = Client;
+			sourceTree = "<group>";
+		};
+		949F0DDC1CBD387A003A7CA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				949F0DE11CBD387A003A7CA7 /* IJKMediaFramework.framework */,
+				949F0DE31CBD387A003A7CA7 /* IJKMediaFrameworkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		94EE072F1CBA27990082D211 /* Extensions */ = {
@@ -331,8 +331,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 94558C9D1CBA4CB200BAEDE9 /* Products */;
-					ProjectRef = 94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */;
+					ProductGroup = 949F0DDC1CBD387A003A7CA7 /* Products */;
+					ProjectRef = 949F0DDB1CBD387A003A7CA7 /* IJKMediaPlayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -343,18 +343,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		94558CA21CBA4CB200BAEDE9 /* IJKMediaFramework.framework */ = {
+		949F0DE11CBD387A003A7CA7 /* IJKMediaFramework.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = IJKMediaFramework.framework;
-			remoteRef = 94558CA11CBA4CB200BAEDE9 /* PBXContainerItemProxy */;
+			remoteRef = 949F0DE01CBD387A003A7CA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		94558CA41CBA4CB200BAEDE9 /* IJKMediaFrameworkTests.xctest */ = {
+		949F0DE31CBD387A003A7CA7 /* IJKMediaFrameworkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = IJKMediaFrameworkTests.xctest;
-			remoteRef = 94558CA31CBA4CB200BAEDE9 /* PBXContainerItemProxy */;
+			remoteRef = 949F0DE21CBD387A003A7CA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -588,7 +588,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Cube/Cube-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/** ~/Documents/ijkplayer-master/ios/IJKMediaPlayer/**";
 			};
 			name = Debug;
 		};
@@ -621,7 +621,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Cube/Cube-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/** ~/Documents/ijkplayer-master/ios/IJKMediaPlayer/**";
 			};
 			name = Release;
 		};

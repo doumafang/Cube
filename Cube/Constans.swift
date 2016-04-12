@@ -18,7 +18,6 @@ public let kSCREEN_WIDTH  = UIScreen.mainScreen().bounds.size.width
 public let kSCREEN_HEIGHT  = UIScreen.mainScreen().bounds.size.height
 /* 屏幕的宽 */
 public let kMAIN_BOUNDS: CGRect = UIScreen.mainScreen().bounds
-
 //public let kRTMPURL = NSURL(string: "rtmp://107.170.204.29:1935/cube/1")!
 public let kRTMPURL = NSURL(string: "rtmp://192.168.150.1:1935/live/1")!
 

@@ -24,7 +24,6 @@ class ClientViewController: UIViewController {
         let bb = BlueTooth()
         bb.openBB()
         
-        IJKFFMoviePlayerController.checkIfFFmpegVersionMatch(true)
         player.scalingMode = IJKMPMovieScalingMode.AspectFit
         player.shouldAutoplay = true
         player.view.frame = CGRectMake(0, 0, kSCREEN_HEIGHT*10/16, kSCREEN_HEIGHT)
