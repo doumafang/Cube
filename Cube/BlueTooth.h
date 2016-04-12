@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BabyBluetooth.h"
 #import "SVProgressHUD.h"
+#import "RKDropdownAlert.h"
 #define weakify( x ) \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wshadow\"") \

@@ -36,26 +36,29 @@ class ClientViewController: UIViewController {
         starView.frame = CGRectMake(0, 0, kSCREEN_HEIGHT*10/16, kSCREEN_HEIGHT)
         view.addSubview(starView)
         
-        let starbutton = ProfileButton()
-        starbutton.backgroundColor = UIColor.whiteColor()
-        starbutton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        starbutton.titleLabel?.font = UIFont(name: "Museo500-Regular", size: 30)
-        starbutton.setTitle("Start", forState: UIControlState.Normal)
-        view.addSubview(starbutton)
-        starbutton.layer.borderWidth = 2
-        starbutton.layer.masksToBounds = true
-        starbutton.layer.cornerRadius = 40
-        starbutton.layer.borderColor = UIColor.blackColor().CGColor
-        starbutton.snp_makeConstraints { (make) in
-            make.center.equalTo(player.view)
-        }
+//        let starbutton = ProfileButton()
+//        starbutton.backgroundColor = UIColor.blackColor()
+//        starbutton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+//        starbutton.titleLabel?.font = UIFont(name: "Gotham", size:17)
+//        starbutton.setTitle("Start your player", forState: UIControlState.Normal)
+//        view.addSubview(starbutton)
+//        starbutton.layer.borderWidth = 1
+//        starbutton.layer.masksToBounds = true
+//        starbutton.layer.cornerRadius = 27
+//        starbutton.layer.borderColor = UIColor.yellowColor().CGColor
+//        starbutton.snp_makeConstraints { (make) in
+//            make.centerX.equalTo(player.view)
+//            make.centerY.equalTo(player.view).multipliedBy(1.2)
+//            make.size.equalTo(CGSizeMake(193, 54))
+//        }
+//        starbutton.addTarget(self, action:#selector(self.startPlay(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
-//        let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 120, 120))
-//        showView.center = CGPointMake(kSCREEN_HEIGHT*5/16, kSCREEN_HEIGHT/2)
-//        showView.color = UIColor.whiteColor()
-//        showView.type = NVActivityIndicatorType.BallSpinFadeLoader
-//        view.addSubview(showView)
-//        showView.startAnimation()
+        let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 120, 120))
+        showView.center = CGPointMake(kSCREEN_HEIGHT*5/16, kSCREEN_HEIGHT/2)
+        showView.color = UIColor.whiteColor()
+        showView.type = NVActivityIndicatorType.BallSpinFadeLoader
+        view.addSubview(showView)
+        showView.startAnimation()
     
         let closeView = UIImageView(image:UIImage(named: "closeB"))
         closeView.userInteractionEnabled = true
@@ -106,13 +109,20 @@ class ClientViewController: UIViewController {
                 }
                     make.size.equalTo(CGSizeMake(100, 100))
             }
-            button.addTarget(self, action:#selector(self.setupYourProfileTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action:#selector(self.sendBBdata(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
     
-    func setupYourProfileTapped(sender: ProfileButton) {
+    func sendBBdata(sender: ProfileButton) {
         sender.animateTouchUpInside {
+            
+        }
+    }
+    
+    func startPlay(sender:ProfileButton)
+    {
+        sender.animateTouchUpInside{
             
         }
     }

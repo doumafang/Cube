@@ -57,12 +57,13 @@
     __weak typeof(self) weakSelf = self;
     [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
         if (central.state == CBCentralManagerStatePoweredOn) {
-            [SVProgressHUD showInfoWithStatus:@"设备打开成功，开始扫描设备"];
+            [RKDropdownAlert title:@"BLUETOOTH IS OPEN"];
+
         }
     }];
     
     [baby setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
-        NSLog(@"搜索到了设备:%@",peripheral);
+        [RKDropdownAlert title:@"GOT THE CAR"];
         if ([peripheral.name isEqualToString:@"HC-08"]) {
             weakSelf.currPeripheral = peripheral;
             [self connect];
@@ -71,17 +72,17 @@
     
     [baby setBlockOnConnected:^(CBCentralManager *central, CBPeripheral *peripheral) {
         NSLog(@"设备：%@--连接成功",peripheral.name);
-        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"设备：%@--连接成功",peripheral.name]];
+        [RKDropdownAlert title:@"SUCCESS CONNECT THE CAR"];
     }];
     
     [baby setBlockOnDisconnect:^(CBCentralManager *central, CBPeripheral *peripheral, NSError *error) {
         NSLog(@"设备：%@--断开连接",peripheral.name);
-        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"设备：%@--断开失败",peripheral.name]];
+        [RKDropdownAlert title:@"DISCONNECT THE CAR"];
     }];
     
     [baby setBlockOnFailToConnect:^(CBCentralManager *central, CBPeripheral *peripheral, NSError *error) {
         NSLog(@"设备：%@--连接失败",peripheral.name);
-        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"设备：%@--连接失败",peripheral.name]];
+        [RKDropdownAlert title:@"FAIL CONNECT THE CAR"];
 
     }];
         

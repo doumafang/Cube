@@ -11,9 +11,7 @@
 @implementation PlayerViewController
 {
     UIView* _AllBackGroudView;
-
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

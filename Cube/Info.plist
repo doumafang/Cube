@@ -5,7 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Museo500-Regular.otf</string>
-		<string>iconfont.ttf</string>
+		<string>Gotham.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

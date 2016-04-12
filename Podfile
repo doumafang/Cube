@@ -12,11 +12,12 @@ target 'Cube' do
     pod 'MMTweenAnimation'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
     pod 'BubbleTransition', '~> 1.0.0'
-    pod 'Ophiuchus', '~> 1.0.3'
+    pod 'LTMorphingLabel'
     pod 'TTGEmojiRate'
     pod 'SVProgressHUD'
     pod 'MMPlaceHolder'
     pod 'StarWars', '~> 1.0'
+    pod 'RKDropdownAlert'
 
 end
 

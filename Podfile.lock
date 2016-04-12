@@ -1,12 +1,13 @@
 PODS:
   - BabyBluetooth (0.6.0)
   - BubbleTransition (1.0.3)
+  - LTMorphingLabel (0.2.0)
   - MMPlaceHolder (1.9)
   - MMTweenAnimation (1.1):
     - pop
   - NVActivityIndicatorView (2.4)
-  - Ophiuchus (1.0.3)
   - pop (1.0.9)
+  - RKDropdownAlert (0.3.0)
   - Shimmer (1.0.2)
   - SnapKit (0.19.1)
   - Spring (1.0.3)
@@ -18,11 +19,12 @@ PODS:
 DEPENDENCIES:
   - BabyBluetooth
   - BubbleTransition (~> 1.0.0)
+  - LTMorphingLabel
   - MMPlaceHolder
   - MMTweenAnimation
   - NVActivityIndicatorView
-  - Ophiuchus (~> 1.0.3)
   - pop
+  - RKDropdownAlert
   - Shimmer
   - SnapKit (~> 0.19.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
@@ -44,11 +46,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   BabyBluetooth: 998483310b5f44724d97c2fd47e82ed1b7e412de
   BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
+  LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
   MMPlaceHolder: 40212b9dfe8760134b1b2fce3232f0d46200178f
   MMTweenAnimation: a095d3203731fcb32a9b8039c4776cef0dbd2a58
   NVActivityIndicatorView: 275a3248d752b5eb1163b33aee664d7e3b43c101
-  Ophiuchus: 486de58f85284047835a26e23ac9fe4fe2255391
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   TTGEmojiRate: 52bfbd96db1616617f9257d249030e3cbef748dc
   VideoSplashKit: 0aa63d0bb37c5bd357de3e6a2a13dea5acad4d66
 
-PODFILE CHECKSUM: bd3dc71041ecd98a5f80df0964702e587c45f154
+PODFILE CHECKSUM: 75cd7676f60fbbb853c4ec5d3130f60ab6a8a708
 
 COCOAPODS: 1.0.0.beta.4

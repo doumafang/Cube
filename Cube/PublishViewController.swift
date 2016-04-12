@@ -28,7 +28,7 @@ class PublishViewController: UIViewController {
         view.addSubview(shimmerView)
         shimmerView.snp_makeConstraints { (make) in
             make.centerX.equalTo(view)
-            make.centerY.equalTo(view).multipliedBy(0.3)
+            make.centerY.equalTo(view).multipliedBy(0.2)
             make.size.equalTo(view)
         }
         shimmerView.contentView = cubeLabel
@@ -37,19 +37,21 @@ class PublishViewController: UIViewController {
         shimmerView.shimmeringPauseDuration = 0.2
         
         
-        let backView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 90, 90))
-        backView.color = UIColor.blackColor()
-        backView.type = NVActivityIndicatorType.SemiCircleSpin
-        view.addSubview(backView)
-        backView.startAnimation()
+        let closeView = UIImageView(image:UIImage(named: "closeB"))
+        closeView.userInteractionEnabled = true
+        view.addSubview(closeView)
+        closeView.snp_makeConstraints { (make) in
+            make.right.equalTo(view).offset(-10)
+            make.top.equalTo(view).offset(10)
+            make.size.equalTo(CGSizeMake(30, 30))
+        }
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.gestureTap(_:)))
-        backView.addGestureRecognizer(tap)
-        
+        closeView.addGestureRecognizer(tap)
         
         let rateView = EmojiRateView.init(frame: CGRectMake(0, 0, 150, 150))
         self.view.addSubview(rateView)
         rateView.center.x = view.center.x
-        rateView.center.y = view.center.y * 0.7
+        rateView.center.y = view.center.y * 0.6
 
         let liveViewController = PlayerViewController()
         view.addSubview(liveViewController.view)
@@ -59,25 +61,27 @@ class PublishViewController: UIViewController {
             make.height.equalTo(view).multipliedBy(0.5)
         }
         
-        
-        
+        let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 80, 80))
+        showView.color = UIColor.whiteColor()
+        showView.type = NVActivityIndicatorType.LineScalePulseOut
+        view.addSubview(showView)
+        showView.snp_makeConstraints { (make) in
+            make.right.equalTo(view).offset(10)
+            make.top.equalTo(liveViewController.view).offset(-10)
+            make.size.equalTo(CGSizeMake(80, 80))
+        }
+        showView.startAnimation()
     }
-    
-    
     
     func gestureTap(gestureRecognizer: UIGestureRecognizer){
         self.dismissViewControllerAnimated(true, completion:{
-            
             LiveVideoCoreSDK.sharedinstance().LiveRelease()
-            LiveVideoCoreSDK.sharedinstance().disconnect()
-  
-            })
+        })
 
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
     
  
 }

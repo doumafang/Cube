@@ -22,6 +22,9 @@
 		944AEC6D1CBC8FB1003E36B1 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC6C1CBC8FB1003E36B1 /* CircularRevealAnimator.swift */; };
 		944AEC6F1CBC8FCD003E36B1 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC6E1CBC8FCD003E36B1 /* AnimationDelegate.swift */; };
 		944AEC741CBC9841003E36B1 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC731CBC9841003E36B1 /* StarsOverlay.swift */; };
+		944AEC801CBCC9B9003E36B1 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944AEC7D1CBCC9B9003E36B1 /* Museo500-Regular.otf */; };
+		944AEC811CBCC9B9003E36B1 /* Splash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 944AEC7E1CBCC9B9003E36B1 /* Splash.mp4 */; };
+		944AEC851CBCCE6B003E36B1 /* Gotham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944AEC841CBCCE6B003E36B1 /* Gotham.otf */; };
 		94556B7A1CBA39B800BAEDE9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94556B791CBA39B800BAEDE9 /* CoreText.framework */; };
 		94558CA81CBA4CDC00BAEDE9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94558CA21CBA4CB200BAEDE9 /* IJKMediaFramework.framework */; };
 		9467B54C1CB960AC00D384EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B54B1CB960AC00D384EB /* AppDelegate.swift */; };
@@ -29,14 +32,10 @@
 		9467B5511CB960AC00D384EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9467B54F1CB960AC00D384EB /* Main.storyboard */; };
 		9467B5531CB960AC00D384EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9467B5521CB960AC00D384EB /* Assets.xcassets */; };
 		9467B5561CB960AC00D384EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9467B5541CB960AC00D384EB /* LaunchScreen.storyboard */; };
-		9467B5601CB9626600D384EB /* Splash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9467B55F1CB9626600D384EB /* Splash.mp4 */; };
-		9467B56B1CB9651800D384EB /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9467B56A1CB9651800D384EB /* Museo500-Regular.otf */; };
 		9467B56F1CB9F26A00D384EB /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B56E1CB9F26A00D384EB /* Constans.swift */; };
 		9467B5791CBA1A3C00D384EB /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B5781CBA1A3C00D384EB /* ClientViewController.swift */; };
 		9467B57B1CBA1CDA00D384EB /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B57A1CBA1CDA00D384EB /* PublishViewController.swift */; };
 		946ED6C21CBAAD6800862336 /* libLiveVideoCoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946ED6C11CBAAD6800862336 /* libLiveVideoCoreSDK.a */; };
-		94EE072D1CBA232C0082D211 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94EE072C1CBA232C0082D211 /* iconfont.ttf */; };
-		94EE07311CBA27B40082D211 /* UIImage+Iconfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07301CBA27B30082D211 /* UIImage+Iconfont.swift */; };
 		94EE07491CBA2BD20082D211 /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07441CBA2BD20082D211 /* TBCityIconFont.m */; };
 		94EE074A1CBA2BD20082D211 /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07461CBA2BD20082D211 /* TBCityIconInfo.m */; };
 		94EE074B1CBA2BD20082D211 /* UIImage+TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EE07481CBA2BD20082D211 /* UIImage+TBCityIconFont.m */; };
@@ -77,6 +76,9 @@
 		944AEC6C1CBC8FB1003E36B1 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealAnimator.swift; sourceTree = "<group>"; };
 		944AEC6E1CBC8FCD003E36B1 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
 		944AEC731CBC9841003E36B1 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
+		944AEC7D1CBCC9B9003E36B1 /* Museo500-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Museo500-Regular.otf"; path = "Cube/Museo500-Regular.otf"; sourceTree = "<group>"; };
+		944AEC7E1CBCC9B9003E36B1 /* Splash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Splash.mp4; path = Cube/Splash.mp4; sourceTree = "<group>"; };
+		944AEC841CBCCE6B003E36B1 /* Gotham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gotham.otf; sourceTree = "<group>"; };
 		94556B791CBA39B800BAEDE9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = "../../Downloads/ijkplayer-ios/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj"; sourceTree = "<group>"; };
 		9467B5481CB960AC00D384EB /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,15 +88,11 @@
 		9467B5521CB960AC00D384EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Cube/Assets.xcassets; sourceTree = "<group>"; };
 		9467B5551CB960AC00D384EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9467B5571CB960AC00D384EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Cube/Info.plist; sourceTree = "<group>"; };
-		9467B55F1CB9626600D384EB /* Splash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Splash.mp4; sourceTree = "<group>"; };
 		9467B5661CB9645A00D384EB /* Cube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Cube-Bridging-Header.h"; path = "Cube/Cube-Bridging-Header.h"; sourceTree = "<group>"; };
-		9467B56A1CB9651800D384EB /* Museo500-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo500-Regular.otf"; sourceTree = "<group>"; };
 		9467B56E1CB9F26A00D384EB /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constans.swift; path = Cube/Constans.swift; sourceTree = "<group>"; };
 		9467B5781CBA1A3C00D384EB /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		9467B57A1CBA1CDA00D384EB /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		946ED6C11CBAAD6800862336 /* libLiveVideoCoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLiveVideoCoreSDK.a; path = "../../Library/Developer/Xcode/DerivedData/Cube-euzmcxueupifggfolzmvarnmjzlv/Build/Products/Debug-iphoneos/libLiveVideoCoreSDK.a"; sourceTree = "<group>"; };
-		94EE072C1CBA232C0082D211 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		94EE07301CBA27B30082D211 /* UIImage+Iconfont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Iconfont.swift"; sourceTree = "<group>"; };
 		94EE07431CBA2BD20082D211 /* TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconFont.h; sourceTree = "<group>"; };
 		94EE07441CBA2BD20082D211 /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
 		94EE07451CBA2BD20082D211 /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
@@ -203,13 +201,13 @@
 		9467B55E1CB9625000D384EB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				94EE072C1CBA232C0082D211 /* iconfont.ttf */,
-				9467B56A1CB9651800D384EB /* Museo500-Regular.otf */,
+				944AEC841CBCCE6B003E36B1 /* Gotham.otf */,
+				944AEC7D1CBCC9B9003E36B1 /* Museo500-Regular.otf */,
+				944AEC7E1CBCC9B9003E36B1 /* Splash.mp4 */,
 				9467B54F1CB960AC00D384EB /* Main.storyboard */,
 				9467B5521CB960AC00D384EB /* Assets.xcassets */,
 				9467B5541CB960AC00D384EB /* LaunchScreen.storyboard */,
 				9467B5571CB960AC00D384EB /* Info.plist */,
-				9467B55F1CB9626600D384EB /* Splash.mp4 */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -227,9 +225,9 @@
 		9467B5721CB9FE0700D384EB /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				9467B5781CBA1A3C00D384EB /* ClientViewController.swift */,
 				944AEC711CBC8FE7003E36B1 /* Animation */,
 				944AEC701CBC8FE2003E36B1 /* BB */,
-				9467B5781CBA1A3C00D384EB /* ClientViewController.swift */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -237,7 +235,6 @@
 		94EE072F1CBA27990082D211 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				94EE07301CBA27B30082D211 /* UIImage+Iconfont.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -367,12 +364,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944AEC811CBCC9B9003E36B1 /* Splash.mp4 in Resources */,
+				944AEC851CBCCE6B003E36B1 /* Gotham.otf in Resources */,
 				9467B5561CB960AC00D384EB /* LaunchScreen.storyboard in Resources */,
 				9467B5531CB960AC00D384EB /* Assets.xcassets in Resources */,
-				94EE072D1CBA232C0082D211 /* iconfont.ttf in Resources */,
+				944AEC801CBCC9B9003E36B1 /* Museo500-Regular.otf in Resources */,
 				9467B5511CB960AC00D384EB /* Main.storyboard in Resources */,
-				9467B56B1CB9651800D384EB /* Museo500-Regular.otf in Resources */,
-				9467B5601CB9626600D384EB /* Splash.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +430,6 @@
 			files = (
 				944AEC6D1CBC8FB1003E36B1 /* CircularRevealAnimator.swift in Sources */,
 				9467B57B1CBA1CDA00D384EB /* PublishViewController.swift in Sources */,
-				94EE07311CBA27B40082D211 /* UIImage+Iconfont.swift in Sources */,
 				9467B54E1CB960AC00D384EB /* ViewController.swift in Sources */,
 				944AEC691CBC8F60003E36B1 /* ProfileButton.swift in Sources */,
 				94EE074A1CBA2BD20082D211 /* TBCityIconInfo.m in Sources */,
