@@ -46,24 +46,6 @@ class PublishViewController: UIViewController {
         backView.addGestureRecognizer(tap)
         
         
-//        let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 150, 150))
-//        showView.center.x = view.center.x
-//        showView.center.y = view.center.y * 0.6
-//        showView.color = UIColor.blackColor()
-//        showView.type = NVActivityIndicatorType.LineScalePulseOutRapid
-//        view.addSubview(showView)
-//        showView.startAnimation()
-        
-        
-//        let rateView = EmojiRateView.init(frame: CGRectMake(0, 0, 100, 100) )
-//        view.addSubview(rateView)
-//        rateView.snp_makeConstraints { (make) in
-//            make.centerY.equalTo(view.center.y * 0.6)
-//            make.centerX.equalTo(view)
-//            make.size.equalTo(CGSizeMake(100, 100))
-//        }
-        
-        
         let rateView = EmojiRateView.init(frame: CGRectMake(0, 0, 150, 150))
         self.view.addSubview(rateView)
         rateView.center.x = view.center.x
@@ -76,15 +58,6 @@ class PublishViewController: UIViewController {
             make.right.left.bottom.equalTo(view)
             make.height.equalTo(view).multipliedBy(0.5)
         }
-
-
-        
-        
-        
-        
-        
-        
-        
         
         
         

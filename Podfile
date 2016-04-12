@@ -8,14 +8,16 @@ target 'Cube' do
     pod 'VideoSplashKit'
     pod 'NVActivityIndicatorView'
     pod 'Shimmer'
-    pod 'CRToastSwift'
     pod 'BabyBluetooth'
-    #    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+    pod 'MMTweenAnimation'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
     pod 'BubbleTransition', '~> 1.0.0'
     pod 'Ophiuchus', '~> 1.0.3'
-    #pod 'VideoCore', '~>0.3.2'
     pod 'TTGEmojiRate'
     pod 'SVProgressHUD'
+    pod 'MMPlaceHolder'
+    pod 'StarWars', '~> 1.0'
+
 end
 
 

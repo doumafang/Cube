@@ -11,6 +11,7 @@ import NVActivityIndicatorView
 import VideoSplashKit
 import SnapKit
 import BubbleTransition
+import StarWars
 
 
 class ViewController: VideoSplashViewController ,UIViewControllerTransitioningDelegate{
@@ -102,6 +103,8 @@ class ViewController: VideoSplashViewController ,UIViewControllerTransitioningDe
         transition.startingPoint = showView.center
 //        transition.bubbleColor = showView.backgroundColor!
         return transition
+//        return StarWarsGLAnimator()
+
     }
 
     

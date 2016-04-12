@@ -21,8 +21,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.clipsToBounds = YES;
     [self RtmpInit];
-    
-    
+      
 }
 
 -(void) RtmpInit{

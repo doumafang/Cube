@@ -18,6 +18,10 @@
 		94474C0D1CBAB4B200264B81 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474C0C1CBAB4B200264B81 /* OpenGLES.framework */; };
 		94474C0F1CBAB4BB00264B81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94474C0E1CBAB4BB00264B81 /* CoreGraphics.framework */; };
 		94474C1E1CBB6D5700264B81 /* BlueTooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 94474C1D1CBB6D5700264B81 /* BlueTooth.m */; };
+		944AEC691CBC8F60003E36B1 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC681CBC8F60003E36B1 /* ProfileButton.swift */; };
+		944AEC6D1CBC8FB1003E36B1 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC6C1CBC8FB1003E36B1 /* CircularRevealAnimator.swift */; };
+		944AEC6F1CBC8FCD003E36B1 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC6E1CBC8FCD003E36B1 /* AnimationDelegate.swift */; };
+		944AEC741CBC9841003E36B1 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AEC731CBC9841003E36B1 /* StarsOverlay.swift */; };
 		94556B7A1CBA39B800BAEDE9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94556B791CBA39B800BAEDE9 /* CoreText.framework */; };
 		94558CA81CBA4CDC00BAEDE9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94558CA21CBA4CB200BAEDE9 /* IJKMediaFramework.framework */; };
 		9467B54C1CB960AC00D384EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467B54B1CB960AC00D384EB /* AppDelegate.swift */; };
@@ -69,6 +73,10 @@
 		94474C0E1CBAB4BB00264B81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		94474C1C1CBB6D5700264B81 /* BlueTooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueTooth.h; sourceTree = "<group>"; };
 		94474C1D1CBB6D5700264B81 /* BlueTooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueTooth.m; sourceTree = "<group>"; };
+		944AEC681CBC8F60003E36B1 /* ProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		944AEC6C1CBC8FB1003E36B1 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealAnimator.swift; sourceTree = "<group>"; };
+		944AEC6E1CBC8FCD003E36B1 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
+		944AEC731CBC9841003E36B1 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
 		94556B791CBA39B800BAEDE9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		94558C9C1CBA4CB200BAEDE9 /* IJKMediaPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IJKMediaPlayer.xcodeproj; path = "../../Downloads/ijkplayer-ios/ios/IJKMediaPlayer/IJKMediaPlayer.xcodeproj"; sourceTree = "<group>"; };
 		9467B5481CB960AC00D384EB /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +128,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		944AEC701CBC8FE2003E36B1 /* BB */ = {
+			isa = PBXGroup;
+			children = (
+				94474C1C1CBB6D5700264B81 /* BlueTooth.h */,
+				94474C1D1CBB6D5700264B81 /* BlueTooth.m */,
+			);
+			name = BB;
+			sourceTree = "<group>";
+		};
+		944AEC711CBC8FE7003E36B1 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				944AEC731CBC9841003E36B1 /* StarsOverlay.swift */,
+				944AEC6E1CBC8FCD003E36B1 /* AnimationDelegate.swift */,
+				944AEC6C1CBC8FB1003E36B1 /* CircularRevealAnimator.swift */,
+				944AEC681CBC8F60003E36B1 /* ProfileButton.swift */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		94558C9D1CBA4CB200BAEDE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,9 +227,9 @@
 		9467B5721CB9FE0700D384EB /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				944AEC711CBC8FE7003E36B1 /* Animation */,
+				944AEC701CBC8FE2003E36B1 /* BB */,
 				9467B5781CBA1A3C00D384EB /* ClientViewController.swift */,
-				94474C1C1CBB6D5700264B81 /* BlueTooth.h */,
-				94474C1D1CBB6D5700264B81 /* BlueTooth.m */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -403,17 +431,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944AEC6D1CBC8FB1003E36B1 /* CircularRevealAnimator.swift in Sources */,
 				9467B57B1CBA1CDA00D384EB /* PublishViewController.swift in Sources */,
 				94EE07311CBA27B40082D211 /* UIImage+Iconfont.swift in Sources */,
 				9467B54E1CB960AC00D384EB /* ViewController.swift in Sources */,
+				944AEC691CBC8F60003E36B1 /* ProfileButton.swift in Sources */,
 				94EE074A1CBA2BD20082D211 /* TBCityIconInfo.m in Sources */,
 				9467B54C1CB960AC00D384EB /* AppDelegate.swift in Sources */,
+				944AEC6F1CBC8FCD003E36B1 /* AnimationDelegate.swift in Sources */,
 				9467B56F1CB9F26A00D384EB /* Constans.swift in Sources */,
 				9467B5791CBA1A3C00D384EB /* ClientViewController.swift in Sources */,
 				94EE07491CBA2BD20082D211 /* TBCityIconFont.m in Sources */,
 				94474BFD1CBAB1BB00264B81 /* PlayerViewController.m in Sources */,
 				94474C1E1CBB6D5700264B81 /* BlueTooth.m in Sources */,
 				94EE074B1CBA2BD20082D211 /* UIImage+TBCityIconFont.m in Sources */,
+				944AEC741CBC9841003E36B1 /* StarsOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
