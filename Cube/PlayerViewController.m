@@ -31,7 +31,7 @@
         [[LiveVideoCoreSDK sharedinstance] LiveInit:self.rtmpURL Preview:view VideSize:LIVE_VIEDO_SIZE_D1 BitRate:LIVE_BITRATE_500Kbps FrameRate:LIVE_FRAMERATE_15];
         [LiveVideoCoreSDK sharedinstance].delegate = self;
         [[LiveVideoCoreSDK sharedinstance] setCameraFront:YES];
-//        [[LiveVideoCoreSDK sharedinstance] connect];
+        [[LiveVideoCoreSDK sharedinstance] connect];
 //        [LiveVideoCoreSDK sharedinstance].micGain = 0;
     });
     [self performSelector:@selector(fillfilter) withObject:self afterDelay:1.f];
@@ -46,9 +46,7 @@
 - (void) viewWillAppear:(BOOL)animated{
     NSLog(@"CameraViewController: viewWillAppear");
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillResignActiveNotification) name:UIApplicationWillResignActiveNotification object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillDidBecomeActiveNotification) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForegroundNotification) name:UIApplicationDidBecomeActiveNotification object:nil];
     
     [super viewDidAppear:YES];

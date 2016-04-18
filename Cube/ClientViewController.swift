@@ -167,9 +167,8 @@ class ClientViewController: UIViewController {
     
     func removeNofication()
     {
-        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: IJKMoviePlayerPlaybackStateDidChangeNotification, object: player)
     }
-    
     
     func sendBBdata(sender: ProfileButton) {
         sender.animateTouchUpInside {

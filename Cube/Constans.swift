@@ -21,7 +21,7 @@ public let kMAIN_BOUNDS: CGRect = UIScreen.mainScreen().bounds
 //public let kRTMPURL = NSURL(string: "rtmp://107.170.204.29:1935/cube/2")!
 //public let kRTMPURL = NSURL(string: "rtmp://192.168.150.1:1935/live/1")!
 //public let kRTMPURL = NSURL(string: "rtmp://192.168.191.2:1935/cube/2")!
-public let kRTMPURL = NSURL(string: "rtmp://169.254.211.166:1935/cube/2")!
+public let kRTMPURL = NSURL(string: "rtmp://169.254.211.166:1935/cube/1")!
 
 
 func KIfIPhone () -> (Bool)

@@ -16,11 +16,17 @@ import BubbleTransition
 class PublishViewController: UIViewController {
     
     let rateView = EmojiRateView.init(frame: CGRectMake(0, 0, 150, 150))
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.getSmileInfo), name: "IAMSMILE", object: nil)
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.getNoSmileInfo(_:)), name: "NOSMILE", object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "IAMSMILE", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "NOSMILE", object: nil)
     }
 
     override func viewDidLoad(){
@@ -58,7 +64,6 @@ class PublishViewController: UIViewController {
         closeView.addGestureRecognizer(tap)
         
         self.view.addSubview(rateView)
-        rateView.rateValue = 3
         rateView.center.x = view.center.x
         rateView.center.y = view.center.y * 0.6
 
@@ -80,23 +85,22 @@ class PublishViewController: UIViewController {
             make.size.equalTo(CGSizeMake(80, 80))
         }
         showView.startAnimation()
-        let test = UITapGestureRecognizer(target: self, action: #selector(self.test))
-        showView.addGestureRecognizer(test)
+        
     }
     
-    func test()
-    {
-        NSNotificationCenter.defaultCenter().postNotificationName("IAMSMILE", object: self)
-    }
-
     func getSmileInfo(){
-        rateView.rateValue = 5
+        dispatch_async(dispatch_get_main_queue(), {
+            self.rateView.rateValue = 5
+        })
         print("SMILE")
     }
     
     func getNoSmileInfo(sender:NSNotification){
         print("NO-SMILE")
-        rateView.rateValue = 1
+        dispatch_async(dispatch_get_main_queue(), {
+            self.rateView.rateValue = 0
+        })
+
     }
 
     func gestureTap(gestureRecognizer: UIGestureRecognizer){

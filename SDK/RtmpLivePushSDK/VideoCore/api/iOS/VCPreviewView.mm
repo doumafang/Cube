@@ -179,7 +179,7 @@
 
         if (faceFeature.hasSmile) {
 //            NSLog(@"笑容");
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"IAMSMILE" object:self userInfo:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"IAMSMILE" object:nil userInfo:nil];
         }
         else
         {
