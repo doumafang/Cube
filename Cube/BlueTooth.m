@@ -37,35 +37,36 @@
 
 - (void)connect
 {
-    [SVProgressHUD showInfoWithStatus:@"开始连接设备"];
+    [RKDropdownAlert title:@"BEGIN TO CONNECT"];
     [baby cancelScan];
     baby.having(self.currPeripheral).then.connectToPeripherals().discoverServices().discoverCharacteristics().readValueForCharacteristic().discoverDescriptorsForCharacteristic().readValueForDescriptors().begin();
 }
 
-- (void)writeValue
-
+-(void)sendDataToBB:(NSString *)sendData
 {
-    Byte b = 0X46;
-    NSData *data = [NSData dataWithBytes:&b length:sizeof(b)];
-    [self.currPeripheral writeValue:data forCharacteristic:self.characteristic type:CBCharacteristicWriteWithResponse];
+    if (self.currPeripheral) {
+        if (self.characteristic) {
+            
+            NSData *data = [sendData dataUsingEncoding:NSASCIIStringEncoding];
+            [self.currPeripheral writeValue:data forCharacteristic:self.characteristic type:CBCharacteristicWriteWithoutResponse];
+        }
+    }
 }
 
 - (void)babyDelegate{
-    
     
     
     __weak typeof(self) weakSelf = self;
     [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
         if (central.state == CBCentralManagerStatePoweredOn) {
             [RKDropdownAlert title:@"BLUETOOTH IS OPEN"];
-
         }
     }];
     
     [baby setBlockOnDiscoverToPeripherals:^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
-        [RKDropdownAlert title:@"GOT THE CAR"];
         if ([peripheral.name isEqualToString:@"HC-08"]) {
-            weakSelf.currPeripheral = peripheral;
+            [RKDropdownAlert title:@"GOT THE CAR"];
+            self.currPeripheral = peripheral;
             [self connect];
         }
     }];
@@ -87,9 +88,10 @@
     }];
         
     [baby setBlockOnReadValueForCharacteristic:^(CBPeripheral *peripheral, CBCharacteristic *characteristic, NSError *error) {
+        
+        NSLog(@"%@",characteristic);
         if ([characteristic.UUID.UUIDString isEqualToString:@"FFE1"]) {
-            weakSelf.characteristic = characteristic;
-            [self writeValue];
+            self.characteristic = characteristic;
         }
     }];
     

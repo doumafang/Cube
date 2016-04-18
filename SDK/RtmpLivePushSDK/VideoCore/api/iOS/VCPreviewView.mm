@@ -167,6 +167,27 @@
 - (void) drawFrame:(CVPixelBufferRef)pixelBuffer
 {
     
+    CIImage *image = [CIImage imageWithCVPixelBuffer:pixelBuffer];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyLow forKey:CIDetectorAccuracy]];
+    
+    //返回数组中包含图片脸部特征信息
+    NSDictionary *options = @{ CIDetectorSmile: @(YES), CIDetectorEyeBlink: @(YES),};
+
+    NSArray *faceFeatures = [detector featuresInImage:image options:options];
+    
+    for (CIFaceFeature *faceFeature in faceFeatures) {
+
+        if (faceFeature.hasSmile) {
+//            NSLog(@"笑容");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"IAMSMILE" object:self userInfo:nil];
+        }
+        else
+        {
+//            NSLog(@"没有笑容");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NOSMILE" object:self userInfo:nil];
+        }
+    }
+    
     if(_paused) return;
     
     bool updateTexture = false;
@@ -262,6 +283,7 @@
     });
     
 }
+
 #pragma mark - Private Methods
 
 - (void) generateGLESBuffers

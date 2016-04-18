@@ -16,15 +16,29 @@ import SnapKit
 class ClientViewController: UIViewController {
     
     let player = IJKFFMoviePlayerController(contentURL: kRTMPURL, withOptions: IJKFFOptions.optionsByDefault())
+    let starView = StarsOverlay()
+    let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 120, 120))
+    let array = ["F","S","L","B","R"];
+    let bb = BlueTooth()
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        removeNofication()
+    }
+    
     override func viewDidLoad(){
         
         super.viewDidLoad()
-        
+        addNofication()
+
         self.view.backgroundColor = UIColor.whiteColor()
-        let bb = BlueTooth()
         bb.openBB()
         
-        player.scalingMode = IJKMPMovieScalingMode.AspectFit
+        player.scalingMode = .AspectFit
         player.shouldAutoplay = true
         player.view.frame = CGRectMake(0, 0, kSCREEN_HEIGHT*10/16, kSCREEN_HEIGHT)
         player.view.backgroundColor = UIColor.blackColor()
@@ -32,7 +46,8 @@ class ClientViewController: UIViewController {
         player.prepareToPlay()
         player.play()
 
-        let starView = StarsOverlay()
+        
+        
         starView.frame = CGRectMake(0, 0, kSCREEN_HEIGHT*10/16, kSCREEN_HEIGHT)
         view.addSubview(starView)
         
@@ -53,7 +68,6 @@ class ClientViewController: UIViewController {
 //        }
 //        starbutton.addTarget(self, action:#selector(self.startPlay(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
-        let showView = NVActivityIndicatorView(frame:CGRectMake(0, 0, 120, 120))
         showView.center = CGPointMake(kSCREEN_HEIGHT*5/16, kSCREEN_HEIGHT/2)
         showView.color = UIColor.whiteColor()
         showView.type = NVActivityIndicatorType.BallSpinFadeLoader
@@ -84,7 +98,6 @@ class ClientViewController: UIViewController {
         view.addSubview(iphoneView)
         iphoneView.startAnimation()
         
-        let array = ["F","L","B","R"];
         for i in 0  ..< array.count
         {
             let button = ProfileButton()
@@ -97,14 +110,30 @@ class ClientViewController: UIViewController {
             button.layer.masksToBounds = true
             button.layer.cornerRadius = 40
             button.layer.borderColor = UIColor.blackColor().CGColor
+            if i == 1 {
+                button.backgroundColor = UIColor.redColor()
+                button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                button.layer.borderColor = UIColor.whiteColor().CGColor
+
+            }
+
+            
+            button.tag = i
             button.snp_makeConstraints { (make) in
                 if i == 0
                 {
                     make.centerX.equalTo(iphoneImage)
                     make.bottom.equalTo(view).offset(-140)
                 }
+                    
+                else if i == 1
+                {
+                    make.centerX.equalTo(iphoneImage).offset(120)
+                    make.bottom.equalTo(view).offset(-140)
+                }
+                    
                 else{
-                    make.centerX.equalTo(iphoneImage).offset((i-2)*120)
+                    make.centerX.equalTo(iphoneImage).offset((i-3)*120)
                     make.bottom.equalTo(view).offset(-20)
                 }
                     make.size.equalTo(CGSizeMake(100, 100))
@@ -114,19 +143,48 @@ class ClientViewController: UIViewController {
     }
     
     
+    func addNofication()
+    {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.moviePlayBackStateDidChange(_:)), name: IJKMoviePlayerPlaybackStateDidChangeNotification, object: player)
+        
+    }
+    
+    func moviePlayBackStateDidChange(send:NSNotification)
+    {
+        print("adasdasdad\(player.playbackState)")
+
+        switch player.playbackState {
+            
+        case .Playing:
+            starView.removeFromSuperview()
+            showView.removeFromSuperview()
+            return
+        default:
+            return
+            
+        }
+    }
+    
+    func removeNofication()
+    {
+        
+    }
+    
+    
     func sendBBdata(sender: ProfileButton) {
         sender.animateTouchUpInside {
-            
+            self.bb.sendDataToBB(self.array[sender.tag])
+        
         }
     }
     
     func startPlay(sender:ProfileButton)
     {
         sender.animateTouchUpInside{
-            
         }
     }
 
+    
     
     func gestureTap(gestureRecognizer: UIGestureRecognizer){
         self.dismissViewControllerAnimated(true, completion:{

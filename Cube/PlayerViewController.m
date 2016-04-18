@@ -19,7 +19,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.clipsToBounds = YES;
     [self RtmpInit];
-      
+    
+    
 }
 
 -(void) RtmpInit{
@@ -30,7 +31,7 @@
         [[LiveVideoCoreSDK sharedinstance] LiveInit:self.rtmpURL Preview:view VideSize:LIVE_VIEDO_SIZE_D1 BitRate:LIVE_BITRATE_500Kbps FrameRate:LIVE_FRAMERATE_15];
         [LiveVideoCoreSDK sharedinstance].delegate = self;
         [[LiveVideoCoreSDK sharedinstance] setCameraFront:YES];
-        [[LiveVideoCoreSDK sharedinstance] connect];
+//        [[LiveVideoCoreSDK sharedinstance] connect];
 //        [LiveVideoCoreSDK sharedinstance].micGain = 0;
     });
     [self performSelector:@selector(fillfilter) withObject:self afterDelay:1.f];

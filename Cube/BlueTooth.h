@@ -27,5 +27,8 @@ _Pragma("clang diagnostic pop")
 @property (nonatomic,strong)CBPeripheral *currPeripheral;
 
 - (void)openBB;
+- (void)sendDataToBB:(NSString *)sendData;
+
+
 
 @end
