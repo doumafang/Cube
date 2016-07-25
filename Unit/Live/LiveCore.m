@@ -1,9 +1,8 @@
 //
-//  LiveVideoCoreSDK.m
-//  LiveVideoCoreSDK
+//  LiveCore
+//  LiveCore
 //
-//  Created by Alex.Shi on 16/3/2.
-//  Copyright © 2016年 com.Alex. All rights reserved.
+//  Created by doumafang on 16/3/2.
 //
 
 #import "LiveVideoCoreSDK.h"

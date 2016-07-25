@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9469F9E61D45EA0D0037AF66 /* LiveCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9469F9E51D45EA0D0037AF66 /* LiveCore.m */; };
 		B7827FF31C8685AE0057E507 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7827FF21C8685AE0057E507 /* CoreVideo.framework */; };
 		B7827FF51C8685BC0057E507 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7827FF41C8685BC0057E507 /* VideoToolbox.framework */; };
 		B7827FF71C8685C90057E507 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7827FF61C8685C90057E507 /* OpenGLES.framework */; };
@@ -17,8 +18,6 @@
 		B78280011C8686070057E507 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78280001C8686070057E507 /* AudioToolbox.framework */; };
 		B78280031C86861A0057E507 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78280021C86861A0057E507 /* AVFoundation.framework */; };
 		B7BBA85A1CA3D6FF00D05AEF /* libRtmpLivePushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BBA8591CA3D6FF00D05AEF /* libRtmpLivePushSDK.a */; };
-		B7CE54411C867E0E00437FF2 /* LiveVideoCoreSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7CE54401C867E0E00437FF2 /* LiveVideoCoreSDK.h */; };
-		B7CE54431C867E0E00437FF2 /* LiveVideoCoreSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CE54421C867E0E00437FF2 /* LiveVideoCoreSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,13 +27,14 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B7CE54411C867E0E00437FF2 /* LiveVideoCoreSDK.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9469F9E41D45EA0D0037AF66 /* LiveCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCore.h; sourceTree = "<group>"; };
+		9469F9E51D45EA0D0037AF66 /* LiveCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCore.m; sourceTree = "<group>"; };
 		B7827FF21C8685AE0057E507 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B7827FF41C8685BC0057E507 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		B7827FF61C8685C90057E507 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -46,8 +46,6 @@
 		B78280021C86861A0057E507 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B7BBA8591CA3D6FF00D05AEF /* libRtmpLivePushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRtmpLivePushSDK.a; path = "../../../Library/Developer/Xcode/DerivedData/LiveVideoCoreSDK-eaoztpuspaivptbkhvageukafdry/Build/Products/Debug-iphoneos/libRtmpLivePushSDK.a"; sourceTree = "<group>"; };
 		B7CE543D1C867E0E00437FF2 /* libLiveVideoCoreSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLiveVideoCoreSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7CE54401C867E0E00437FF2 /* LiveVideoCoreSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveVideoCoreSDK.h; sourceTree = "<group>"; };
-		B7CE54421C867E0E00437FF2 /* LiveVideoCoreSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveVideoCoreSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9469F9E01D45E9E60037AF66 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				9469F9E41D45EA0D0037AF66 /* LiveCore.h */,
+				9469F9E51D45EA0D0037AF66 /* LiveCore.m */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		B7CE54341C867E0E00437FF2 = {
 			isa = PBXGroup;
 			children = (
-				B7CE543F1C867E0E00437FF2 /* LiveVideoCoreSDK */,
+				9469F9E01D45E9E60037AF66 /* Live */,
 				B7CE543E1C867E0E00437FF2 /* Products */,
 				D99D2EB03AFBAA9009BC5FAE /* Frameworks */,
 			);
@@ -86,15 +93,6 @@
 				B7CE543D1C867E0E00437FF2 /* libLiveVideoCoreSDK.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B7CE543F1C867E0E00437FF2 /* LiveVideoCoreSDK */ = {
-			isa = PBXGroup;
-			children = (
-				B7CE54401C867E0E00437FF2 /* LiveVideoCoreSDK.h */,
-				B7CE54421C867E0E00437FF2 /* LiveVideoCoreSDK.m */,
-			);
-			path = LiveVideoCoreSDK;
 			sourceTree = "<group>";
 		};
 		D99D2EB03AFBAA9009BC5FAE /* Frameworks */ = {
@@ -148,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B7CE54381C867E0E00437FF2 /* Build configuration list for PBXProject "LiveVideoCoreSDK" */;
+			buildConfigurationList = B7CE54381C867E0E00437FF2 /* Build configuration list for PBXProject "Live" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -170,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7CE54431C867E0E00437FF2 /* LiveVideoCoreSDK.m in Sources */,
+				9469F9E61D45EA0D0037AF66 /* LiveCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +316,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7CE54381C867E0E00437FF2 /* Build configuration list for PBXProject "LiveVideoCoreSDK" */ = {
+		B7CE54381C867E0E00437FF2 /* Build configuration list for PBXProject "Live" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7CE54441C867E0E00437FF2 /* Debug */,
